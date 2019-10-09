@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>My Portfolio Site</title>
-    <link rel="stylesheet" type="text/css" href="https://davschmidt.github.io/style.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 
@@ -24,6 +24,54 @@
             <h3>Web Developer</h3>
         </div>
 
+        <div class="aboutMe">
+            <p><strong>Hello World!</strong><br>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur a fuga excepturi dignissimos vero omnis quo, et tempora voluptas ratione cupiditate dolor consectetur molestias soluta nesciunt eos reiciendis, ducimus harum itaque! Iure assumenda obcaecati modi provident, repudiandae consequatur rerum vitae sint quae voluptatum debitis deserunt suscipit tenetur deleniti mollitia voluptas dicta ut delectus quibusdam, aspernatur asperiores itaque, culpa dolore! Rem possimus necessitatibus ullam nemo repellendus debitis distinctio, expedita nesciunt?</p>
+            <p>Laudantium adipisci, ad animi recusandae voluptatibus ex vero. Blanditiis, odio quidem, voluptas exercitationem quas perferendis nam velit aliquam commodi, earum iste incidunt eaque. Sint non iste, dicta tempora cupiditate molestiae facilis culpa quod eius libero corporis vitae odio porro neque fugit a reiciendis doloremque dolores magni minus eveniet earum tenetur iusto. Veritatis delectus modi ducimus, velit tempora, commodi facere maxime nesciunt eaque temporibus nobis quidem explicabo ad magnam rerum odio nostrum veniam, ipsum nam? Numquam eum nam deserunt. Iure, expedita earum?</p>
+        </div>
+
+        <div class= "gallery">
+        <h1>Hello I am the Gallery</h1>
+            <div class="image">
+                <img src="images/img1.jpg">
+            </div>
+            <div class="image">
+                <img src="images/img2.jpg">
+            </div>
+            <div class="image">
+                <img src="images/img3.jpg">
+            </div>
+            <div class="image">
+                <img src="images/img4.jpg">
+            </div>
+            <div class="image">
+                <img src="images/img5.jpg">
+            </div>
+            <div class="image">
+                <img src="images/img6.jpg">
+            </div>
+            <div class="image">
+                <img src="images/img7.jpg">
+            </div>
+            <div class="image">
+                <img src="images/img8.jpg">
+            </div>
+            <div class="image">
+                <img src="images/img8.jpg">
+            </div>
+        </div>
+
+        <div class="contactMe">
+            <div class="contactForm">
+                <form action="index.html" method="post">
+                    <input type="text" name="" class="inputText" value="First Name">
+                    <input type="text" name="" class="inputText" value="Last Name">
+                    <input type="text" name="" class="inputText" value="Your Email">
+                    <textarea cols="4" rows="6" class="inputMessage"> Your Messages.</textarea>
+                    <input type="button" name="" class="submitButton" value="Submit">
+                </form>
+            </div>
+        </div>
     </div>
 
     </div>
@@ -35,6 +83,40 @@
                 var selected = $(this);
                 $('a').removeClass('active');
                 $(selected).addClass('active');
+            });
+            
+            var $a = $('.a'),
+            $b = $('.b'),
+            $c = $('.c'),
+            $d = $('.d'),
+            $home = $('.home'),
+            $aboutMe = $('.aboutMe'),
+            $gallery = $('.gallery'),
+            $contactMe = $('.contactMe');
+
+            $a.click(function(){
+                $home.fadeIn();
+                $aboutMe.fadeOut();
+                $gallery.fadeOut();
+                $contactMe.fadeOut();
+            });
+            $b.click(function(){
+                $aboutMe.fadeIn();
+                $home.fadeOut();
+                $gallery.fadeOut();
+                $contactMe.fadeOut();
+            });
+            $c.click(function(){
+                $gallery.fadeIn();
+                $home.fadeOut();
+                $aboutMe.fadeOut();
+                $contactMe.fadeOut();
+            });
+            $d.click(function(){
+                $contactMe.fadeIn();
+                $home.fadeOut();
+                $gallery.fadeOut();
+                $aboutMe.fadeOut();
             });
         });
     
